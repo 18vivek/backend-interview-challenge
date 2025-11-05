@@ -22,7 +22,7 @@ export interface SyncQueueItem {
 }
 
 export interface SyncResult {
-  success: boolean;
+  success: number;
   synced_items: number;
   failed_items: number;
   errors: SyncError[];

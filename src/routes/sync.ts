@@ -1,9 +1,9 @@
 import { Router, Request, Response } from 'express';
 import { SyncService } from '../services/syncService';
 import { TaskService } from '../services/taskService';
-import { Database } from '../db/database';
+import { AppDatabase } from '../db/database';
 
-export function createSyncRouter(db: Database): Router {
+export function createSyncRouter(db: AppDatabase): Router {
   const router = Router();
   const taskService = new TaskService(db);
   const syncService = new SyncService(db, taskService);
